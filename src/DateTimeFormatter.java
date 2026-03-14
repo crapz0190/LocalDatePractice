@@ -17,7 +17,7 @@ public class DateTimeFormatter {
         if (date.length() == 19) {
             System.out.println(dateTime.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")));
         } else {
-            System.out.println(dateTime.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
+            System.out.println(dateTime.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm")));
         }
     }
 }
