@@ -14,6 +14,10 @@ public class DateTimeFormatter {
         LocalDateTime dateTime = LocalDateTime.parse(date);
         dateTime = dateTime.minusHours(hours).plusMinutes(minutes);
 
-        System.out.println(dateTime.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm")));
+        if (date.length() == 19) {
+            System.out.println(dateTime.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")));
+        } else {
+            System.out.println(dateTime.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
+        }
     }
 }
